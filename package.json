@@ -1,0 +1,63 @@
+{
+  "name": "react-bootstrap-responsive-grid-and-utilities",
+  "version": "1.0.0",
+  "description": "A lightweight and customizable React component library providing a robust, Bootstrap-inspired responsive grid system and essential utility classes for rapid UI development.",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "bootstrap",
+    "grid",
+    "responsive",
+    "utilities",
+    "scss",
+    "css-in-js",
+    "components",
+    "ui-library"
+  ],
+  "author": "Dylan Drechsel",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DylanDrechsel/react-bootstrap-responsive-grid-and-utilities.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DylanDrechsel/react-bootstrap-responsive-grid-and-utilities/issues"
+  },
+  "homepage": "https://github.com/DylanDrechsel/react-bootstrap-responsive-grid-and-utilities#readme",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-react": "^7.24.0",
+    "@babel/preset-typescript": "^7.24.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "postcss": "^8.4.38",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rollup": "^4.18.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.77.4",
+    "typescript": "^5.4.5"
+  }
+}
