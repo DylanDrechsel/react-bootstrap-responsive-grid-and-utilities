@@ -1,4 +1,4 @@
-import './styles/index.scss';
+import React from 'react';
 
 export { Container } from './components/Container';
 export { Row } from './components/Row';
