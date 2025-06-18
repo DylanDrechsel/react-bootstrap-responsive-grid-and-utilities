@@ -1,3 +1,6 @@
+// rollup.config.js
+// This file uses pure ES Module syntax.
+
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
@@ -7,9 +10,24 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import terser from '@rollup/plugin-terser';
 import dts from 'rollup-plugin-dts';
 
-const packageJson = require('./package.json');
+// NEW: Imports for reading package.json in an ES Module context
+import path from 'path';
+import {
+    fileURLToPath
+} from 'url';
+import fs from 'fs';
 
+// Get the equivalent of __dirname for ES Modules
+const __filename = fileURLToPath(
+    import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Read package.json using fs.readFileSync, as 'require' is not available in ES Modules
+const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'package.json'), 'utf8'));
+
+// The configuration is exported as a default ES module export
 export default [
+    // Main bundle for CJS and ESM (your library's code)
     {
         input: 'src/index.ts', // Your main entry point for the library
         output: [{
@@ -31,7 +49,7 @@ export default [
                 tsconfig: './tsconfig.json'
             }), // Transpiles TypeScript
             babel({
-                babelHelpers: 'bundled',
+                babelHelpers: 'bundled', // Or 'runtime' if you use @babel/plugin-transform-runtime
                 exclude: 'node_modules/**', // Don't transpile node_modules files with Babel
             }),
             postcss({
@@ -50,6 +68,6 @@ export default [
             file: 'dist/index.d.ts',
             format: 'esm'
         }], // Overwrite with a cleaner .d.ts bundle
-        plugins: [dts.default()], // Use dts.default() due to how rollup-plugin-dts exports
+        plugins: [dts()], // dts() is the correct way to access the default export from this plugin
     },
 ];
