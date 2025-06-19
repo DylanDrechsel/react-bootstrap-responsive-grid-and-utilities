@@ -59,6 +59,7 @@ yarn add react-bootstrap-responsive-grid-and-utilities
 
 1. Import Styles:
 ```
+// In your main.tsx or a relevant file
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
