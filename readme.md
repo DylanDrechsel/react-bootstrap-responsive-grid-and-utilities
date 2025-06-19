@@ -14,6 +14,7 @@ A lightweight and customizable React component library providing a robust, Boots
 * [Installation](#installation)
 * [Usage](#usage)
 * [Customization](#customization)
+* [Documentation](#documentation)
 * [Contributing](#contributing)
 * [License](#license)
 
