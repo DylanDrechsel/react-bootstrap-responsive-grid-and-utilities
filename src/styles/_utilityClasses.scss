@@ -1310,18 +1310,18 @@ $body:       #212529 !default; // off gray
 $muted:      #6c757d !default; // gray
 
 $theme-colors: (
-  "primary": $primary,
-  "secondary": $secondary,
-  "success": $success,
-  "info": $info,
-  "warning": $warning,
-  "danger": $danger,
-  "light": $light,
-  "dark": $dark,
-  "white": $white,
-  "black": $black,
-  "body": $body,
-  "muted": $muted
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark,
+    "white": $white,
+    "black": $black,
+    "body": $body,
+    "muted": $muted
 );
 
 // Define global body text color
